@@ -1,0 +1,97 @@
+/* =====================================
+   General Body Styling
+===================================== */
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #f4f4f4;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =====================================
+   Header Typography Styling
+===================================== */
+
+.mainHeader{
+    background-color: #333;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+.mainHeader h1{
+
+    font-size: 40px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================
+   Event Card Styling
+===================================== */
+
+.eventCard{
+    background-color: white;
+
+    width: 300px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 5px gray;
+}
+
+
+/* =====================================
+   Event Title Styling
+===================================== */
+
+.eventCard h2{
+
+    font-size: 28px;
+
+    font-style: italic;
+
+    font-weight: 600;
+
+    color: #007BFF;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   Description Text Styling
+===================================== */
+
+.description{
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+
+    text-align: justify;
+
+    text-transform: capitalize;
+
+    color: #444;
+}

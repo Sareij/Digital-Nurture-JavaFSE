@@ -1,0 +1,92 @@
+/* =====================================
+   General Body Styling
+===================================== */
+
+body{
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =====================================
+   Header Styling
+===================================== */
+
+.mainHeader{
+    background-color: #333;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =====================================
+   Table Section Styling
+===================================== */
+
+.tableSection{
+    margin: 40px;
+}
+
+
+/* =====================================
+   Table Styling
+===================================== */
+
+table{
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+
+/* =====================================
+   Table Header Styling
+===================================== */
+
+th{
+
+    border: 1px solid black;
+
+    padding: 15px;
+
+    background-color: #007BFF;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   Table Data Cell Styling
+===================================== */
+
+td{
+
+    border: 1px solid black;
+
+    padding: 12px;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   Zebra Striping Effect
+===================================== */
+
+tr:nth-child(even){
+
+    background-color: #f2f2f2;
+}
