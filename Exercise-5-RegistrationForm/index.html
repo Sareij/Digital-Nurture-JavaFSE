@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <style>
+        form{
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"]{
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            background-color: darkblue;
+        }
+        #result{
+            text-align: center;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:darkgoldenrod;font-size: 24px; margin-left: 640px;">Event Registration Form</h1>
+    <form action="" onsubmit="event.preventDefault(); document.getElementById('result').style.display = 'block';">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required autofocus placeholder="Enter your Name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required autofocus placeholder="Enter your Email"><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required autofocus><br><br>
+
+        <label for="eventType">Event Type:</label>
+        <select id="eventType" name="eventType" required autofocus >
+            <option value="">Select Event Type</option>
+            <option value="wedding">Wedding</option>
+            <option value="birthday">Birthday</option>
+            <option value="corporate">Corporate</option>
+        </select><br><br>
+
+        <label for="textArea">Message:</label>
+        <textarea id="textArea" name="textArea" required autofocus placeholder="Enter your message"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+
+        <output id="result">
+            <p >Form Submitted Successfully!</p>
+        </output>
+    </form>
+    <script>
+        document.getElementById('result').style.display = 'none';
+
+
+
+    </script>
+</body>
+</html>
