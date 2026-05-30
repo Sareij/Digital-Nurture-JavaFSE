@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+input {
+    padding: 8px;
+    width: 250px;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#message {
+    font-weight: bold;
+    margin-top: 10px;
+}

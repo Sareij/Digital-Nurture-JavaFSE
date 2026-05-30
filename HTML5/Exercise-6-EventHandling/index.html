@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        form{
+            width: 500px;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+
+        input, select, textarea{
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        button{
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        img{
+            width: 200px;
+            height: 150px;
+            border: 2px solid black;
+            transition: 0.3s;
+
+        }
+
+        #feeDisplay,
+        #phoneMsg,
+        #charCount{
+            font-weight: bold;
+        }
+        #submit{
+            background-color: blue;
+            color: white;
+            border: none;
+            width: 90%;
+            margin-top: 10px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: lightyellow;text-align: center;">
+
+    <h1>Event Feedback Form</h1>
+
+    <form style="background-color: linen; margin: auto;" action="" onsubmit="event.preventDefault(); submitForm();">
+
+        <label>Phone Number:</label>
+        <input type="tel" id="phone" onblur="validatePhone()" placeholder="Enter phone number">
+
+        <p id="phoneMsg"></p>
+
+        <label>Select Event:</label>
+        <select id="eventType" onchange="showFee()">
+            <option value="">Choose Event</option>
+            <option value="100">Music Event</option>
+            <option value="200">Food Festival</option>
+            <option value="300">Community Meetup</option>
+        </select>
+
+        <p id="feeDisplay"></p>
+
+        <label>Feedback:</label>
+        <textarea id="feedback" rows="5" onkeyup="countCharacters()" placeholder="Enter feedback"></textarea>
+
+        <p id="charCount">Characters: 0</p>
+
+        <button type="button" id="submit" onclick="submitForm()">Submit</button>
+
+    </form>
+
+    <br><br>
+
+    <img src="https://www.w3schools.com/css/img_forest.jpg"
+         id="eventImage"
+         ondblclick="enlargeImage()"
+         alt="Event Image">
+
+    <script>
+
+        function validatePhone(){
+
+            let phone = document.getElementById("phone").value;
+            let msg = document.getElementById("phoneMsg");
+
+            if(phone.length != 10 || isNaN(phone)){
+                msg.innerHTML = "Invalid Phone Number";
+                msg.style.color = "red";
+            }
+            else{
+                msg.innerHTML = "Valid Phone Number";
+                msg.style.color = "green";
+            }
+        }
+
+        function showFee(){
+
+            let fee = document.getElementById("eventType").value;
+
+            document.getElementById("feeDisplay").innerHTML =
+            "Event Fee: ₹" + fee;
+        }
+
+        function submitForm(){
+
+            alert("Feedback Submitted Successfully!");
+        }
+
+        function enlargeImage(){
+
+            let image = document.getElementById("eventImage");
+
+            image.style.width = "400px";
+            image.style.height = "300px";
+        }
+
+        function countCharacters(){
+
+            let text =
+            document.getElementById("feedback").value;
+
+            document.getElementById("charCount").innerHTML =
+            "Characters: " + text.length;
+        }
+
+    </script>
+
+</body>
+</html>

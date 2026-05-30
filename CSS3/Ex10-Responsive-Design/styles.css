@@ -1,0 +1,195 @@
+/* =====================================
+   Universal Reset
+===================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   Body Styling
+===================================== */
+
+body{
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+}
+
+
+/* =====================================
+   Header Styling
+===================================== */
+
+.mainHeader{
+
+    background-color: #333;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 3vh;
+}
+
+
+/* =====================================
+   Navigation Bar Styling
+===================================== */
+
+.navbar{
+
+    background-color: #444;
+
+    padding: 2vh;
+}
+
+
+/* Flexbox Navigation Layout */
+
+.navLinks{
+
+    display: flex;
+
+    justify-content: center;
+
+    list-style: none;
+}
+
+
+/* Navigation Items */
+
+.navLinks li{
+
+    margin: 0 2vw;
+}
+
+
+/* Navigation Links */
+
+.navLinks a{
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 1.2rem;
+}
+
+
+/* =====================================
+   Event Section Layout
+===================================== */
+
+/* Flexbox Responsive Layout */
+
+.eventSection{
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    width: 90%;
+
+    margin: 5vh auto;
+}
+
+
+/* =====================================
+   Event Card Styling
+===================================== */
+
+.eventCard{
+
+    background-color: white;
+
+    width: 30%;
+
+    min-width: 250px;
+
+    padding: 2vw;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 5px gray;
+
+    text-align: center;
+}
+
+
+/* Event Images */
+
+.eventCard img{
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================
+   Responsive Media Query
+===================================== */
+
+@media screen and (max-width: 768px){
+
+    /* Stack navigation vertically */
+
+    .navLinks{
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .navLinks li{
+
+        margin: 10px 0;
+    }
+
+
+    /* Reduce card width */
+
+    .eventCard{
+
+        width: 90%;
+    }
+
+
+    /* Reduce font sizes */
+
+    .mainHeader h1{
+
+        font-size: 24px;
+    }
+
+
+    .eventCard h2{
+
+        font-size: 20px;
+    }
+
+
+    .eventCard p{
+
+        font-size: 14px;
+    }
+
+
+    /* Reduce image size */
+
+    .eventCard img{
+
+        width: 80%;
+    }
+}

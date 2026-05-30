@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preferences</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container{
+            width: 400px;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        select, button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+
+        #saveBtn{
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+        #clearBtn{
+            background-color: red;
+            color: white;
+            border: none;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1 style="margin-left: 599px;">User Preferences</h1>
+
+    <div class="container" style="margin-left: 520px;background-color: lightsalmon;border-radius: 10px;height: 250px;">
+
+        <h2>Preferred Event Type</h2>
+
+        <label>Select Event:</label>
+
+        <select id="eventType">
+
+            <option value="">Choose Event</option>
+
+            <option value="Music Event">Music Event</option>
+
+            <option value="Food Festival">Food Festival</option>
+
+            <option value="Community Meetup">Community Meetup</option>
+
+        </select>
+
+        <button onclick="savePreference()" id="saveBtn">
+            Save Preference
+        </button>
+
+        <button onclick="clearPreferences()" id="clearBtn">
+            Clear Preferences
+        </button>
+
+    </div>
+
+    <script>
+
+        window.onload = function(){
+
+            let savedEvent =
+            localStorage.getItem("preferredEvent");
+
+            if(savedEvent){
+
+                document.getElementById("eventType").value =
+                savedEvent;
+            }
+        };
+
+        function savePreference(){
+
+            let selectedEvent =
+            document.getElementById("eventType").value;
+
+            localStorage.setItem(
+                "preferredEvent",
+                selectedEvent
+            );
+
+            sessionStorage.setItem(
+                "currentEvent",
+                selectedEvent
+            );
+
+            alert("Preference Saved!");
+        }
+
+        function clearPreferences(){
+
+            localStorage.clear();
+
+            sessionStorage.clear();
+
+            alert("Preferences Cleared!");
+
+            document.getElementById("eventType").value = "";
+        }
+
+    </script>
+
+</body>
+</html>

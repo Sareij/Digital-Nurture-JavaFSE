@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Music Festival",
+        "category": "Music",
+        "seats": 50
+    },
+    {
+        "name": "Baking Workshop",
+        "category": "Workshop",
+        "seats": 30
+    },
+    {
+        "name": "Football Match",
+        "category": "Sports",
+        "seats": 40
+    }
+]
