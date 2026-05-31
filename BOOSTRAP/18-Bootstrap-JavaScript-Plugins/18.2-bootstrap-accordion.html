@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bootstrap Accordion</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+
+    <h1 class="text-center mb-4">Accordion Example</h1>
+
+    <div class="accordion" id="myAccordion">
+
+      <!-- Item 1 -->
+      <div class="accordion-item">
+
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+            What is Bootstrap?
+          </button>
+        </h2>
+
+        <div id="item1" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+          <div class="accordion-body">
+            Bootstrap is a CSS framework used to build responsive websites quickly.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item">
+
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item2">
+            Why use Bootstrap?
+          </button>
+        </h2>
+
+        <div id="item2" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+          <div class="accordion-body">
+            It provides ready-made UI components and responsive grid system.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Item 3 -->
+      <div class="accordion-item">
+
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item3">
+            Is Bootstrap easy?
+          </button>
+        </h2>
+
+        <div id="item3" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+          <div class="accordion-body">
+            Yes, it is beginner-friendly and widely used in web development.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS (IMPORTANT) -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Display Utilities</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+
+    <h1 class="text-center mb-4">Display & Visibility</h1>
+
+    <!-- Hidden on all screens -->
+    <div class="bg-danger text-white p-3 d-none">
+      Hidden on all screens (d-none)
+    </div>
+
+    <!-- Visible from medium screens -->
+    <div class="bg-primary text-white p-3 mt-3 d-none d-md-block">
+      Visible from medium screens (d-md-block)
+    </div>
+
+    <!-- Flex on large screens -->
+    <div class="bg-success text-white p-3 mt-3 d-none d-lg-flex justify-content-between">
+      <span>Left Content</span>
+      <span>Right Content</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
