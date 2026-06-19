@@ -1,7 +1,5 @@
 
 
-
-
 public class Exercise01_HelloWorld {
 
     public static void main(String[] args) {

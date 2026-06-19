@@ -4,7 +4,7 @@
  * Demonstrate Pattern Matching for switch (Java 21).
  */
 
-public class Exercise30_PatternMatchingSwitchDemo {
+public class  Exercise30_PatternMatchingSwitchDemo{
 
     public static void checkType(Object obj) {
 

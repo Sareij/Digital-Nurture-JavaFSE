@@ -25,6 +25,5 @@ public class Exercise28_StreamEvenNumberFilter {
 
         System.out.println("\nEven Numbers:");
         System.out.println(evenNumbers);
-
     }
 }
