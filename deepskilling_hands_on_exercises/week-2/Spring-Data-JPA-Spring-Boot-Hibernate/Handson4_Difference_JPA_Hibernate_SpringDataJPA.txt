@@ -1,0 +1,12 @@
+JPA:
+- Specification
+- Defines persistence standards
+
+Hibernate:
+- ORM framework
+- Implements JPA
+
+Spring Data JPA:
+- Reduces boilerplate code
+- Uses Hibernate/JPA internally
+- Provides JpaRepository
