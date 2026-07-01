@@ -1,0 +1,60 @@
+package com.cognizant.ormlearn.model;
+
+import jakarta.persistence.*;
+import java.util.Set;
+
+@Entity
+@Table(name = "department")
+public class Department {
+
+    @Id
+    @Column(name = "de_id")
+    private int id;
+
+    @Column(name = "de_name")
+    private String name;
+
+    @OneToMany(mappedBy = "department")
+    private Set<Employee> employeeList;
+
+    public Department() {
+    }
+
+    public Department(int id, String name, Set<Employee> employeeList) {
+        this.id = id;
+        this.name = name;
+        this.employeeList = employeeList;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Set<Employee> getEmployeeList() {
+        return employeeList;
+    }
+
+    public void setEmployeeList(Set<Employee> employeeList) {
+        this.employeeList = employeeList;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
